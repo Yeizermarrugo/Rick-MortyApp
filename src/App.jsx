@@ -39,7 +39,8 @@ function App() {
     
     <div className="header">
     </div>
-    <Search/>
+    <Search
+    placeholder="Search..."/>
       {
         <article className='navbar'>
 

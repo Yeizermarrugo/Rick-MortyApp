@@ -197,7 +197,7 @@ button[disabled] {
   width: 20%;
 }
 
-@media screen and (min-width: 300px) and (max-width:500px) {
+@media screen and (min-width: 300px) and (max-width:700px) {
   #root {
     background: url('./img/header_background1.png') no-repeat;
   }
@@ -214,6 +214,7 @@ button[disabled] {
   .cardimg {
     border-bottom-left-radius: 10%;
     border-top-left-radius: 10%;
+    width: 40%;
   }
 
   article.character1>div>ul{
@@ -223,7 +224,7 @@ button[disabled] {
     gap:5px
   }
   article.character1>div>img{
-    margin-left: -10px;
+    margin-left: -10%;
   }
 
   .alive {
