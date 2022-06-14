@@ -39,7 +39,6 @@ function App() {
     <>
 
       <div className="header">
-        <img src={header} />
       </div>
       <div className="search-container">
       <Search
