@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Search = ({placeholder, location}) => {
+
+const Search = ({setLocationSearch, placeholder}) => {
+
+ 
+
+    const searchLocation = (e) => {
+        e.preventDefault()
+        setLocationSearch(e.target.children[0].value)
+    }
+
   return (
-    <div className="search-container">
-        <input className="search" type="text" placeholder={placeholder}/>
-        {location?.name.map((value,key) =>{
-            return <div>{value.name}</div>
-        })}
-    </div>
+    <form  className="search-container" onSubmit={searchLocation}>
+        <input className="search-input" type="search" name="search" placeholder={placeholder}/>
+    </form>
   )
 }
 

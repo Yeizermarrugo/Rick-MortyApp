@@ -5,6 +5,7 @@ import CardsCharacter from './components/CardsCharacter'
 import Loading from './components/Loading'
 import Paginacion from './components/Paginacion'
 import Search from './components/Search'
+import header from './img/461.jpg'
 
 function App() {
   const [locationSearch, setLocationSearch] = useState()
@@ -13,7 +14,7 @@ function App() {
   const [pagina, setPagina] = useState(1)
   const [porPagina, setPorPagina] = useState(6)
 
-  const maximo = Math.ceil(location?.residents.length/porPagina)
+  const maximo = Math.ceil(location?.residents.length / porPagina)
 
 
   useEffect(() => {
@@ -36,11 +37,15 @@ function App() {
 
   return (
     <>
-    
-    <div className="header">
-    </div>
-    <Search
-    placeholder="Search..."/>
+
+      <div className="header">
+        <img src={header} />
+      </div>
+      <div className="search-container">
+      <Search
+        placeholder="Search... id"
+        setLocationSearch={setLocationSearch} />
+        </div>
       {
         <article className='navbar'>
 
@@ -56,7 +61,7 @@ function App() {
       <div className="character">
         {isLoading ?
           <Loading /> :
-          location?.residents.slice((pagina-1)* porPagina, (pagina-1)* porPagina+porPagina).map(resident => (
+          location?.residents.slice((pagina - 1) * porPagina, (pagina - 1) * porPagina + porPagina).map(resident => (
             <CardsCharacter
               resident={resident}
               key={resident}
@@ -64,11 +69,11 @@ function App() {
           ))}
       </div>
       <div className="container">
-      <Paginacion 
+        <Paginacion
           pagina={pagina}
           setPagina={setPagina}
-          maximo = {maximo}
-          />
+          maximo={maximo}
+        />
       </div>
 
     </>
