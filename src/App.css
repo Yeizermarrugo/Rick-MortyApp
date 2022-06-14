@@ -207,7 +207,7 @@ button[disabled] {
     color: white;
     border-radius: 10%;
     height: 200px;
-    width: 97%;
+    width: 80%;
     margin-left:10px;
   }
 
@@ -215,6 +215,11 @@ button[disabled] {
     border-bottom-left-radius: 10%;
     border-top-left-radius: 10%;
     width: 40%;
+  }
+
+  article.character1{
+    margin-right: 10px;
+    padding-right: 10px;
   }
 
   article.character1>div>ul{
