@@ -37,14 +37,19 @@ function App() {
 
   return (
     <>
-
+    
+    <div>
       <div className="header">
       </div>
       <div className="search-container">
+      {isLoading ?
+          <Loading /> :
       <Search
         placeholder="Search... id"
         setLocationSearch={setLocationSearch} />
+      }
         </div>
+
       {
         <article className='navbar'>
 
@@ -74,9 +79,11 @@ function App() {
           maximo={maximo}
         />
       </div>
+</div>
 
     </>
   )
+          
 }
 
 export default App
