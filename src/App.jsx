@@ -42,12 +42,9 @@ function App() {
       <div className="header">
       </div>
       <div className="search-container">
-      {isLoading ?
-          <Loading /> :
       <Search
-        placeholder="Search... id"
+        placeholder="Search id... (1-126)"
         setLocationSearch={setLocationSearch} />
-      }
         </div>
 
       {
